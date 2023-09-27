@@ -19,7 +19,7 @@ body {
   color: #fff;
 }
 
-/* Navbar */
+/* Navbar start*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -90,6 +90,66 @@ body {
   border-bottom: 0.1rem solid var(--primary);
   transform: scaleX(0.6);
 }
+/* Navbar end*/
+
+/* Homepage start */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .blur {
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+}
+
+.hero .content {
+  padding: 1.2rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta {
+  margin-top: 1.5rem;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #038da8;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta:hover {
+  background-color: var(--primary);
+}
+/* Homepage end */
 
 /* Media queries */
 /* Laptop */
