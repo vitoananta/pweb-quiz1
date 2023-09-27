@@ -179,7 +179,7 @@ body {
 }
 
 .hero-profile .blur .content h1 {
-  padding: 6rem 0 3rem;
+  padding: 5rem 0 3rem;
   font-size: 3rem;
 }
 
@@ -290,7 +290,7 @@ body {
 
 .hero-hometown .content .row1-title h1 {
   font-size: 3rem;
-  padding: 6rem 0 3rem;
+  padding: 5rem 0 3rem;
   display: flex;
   justify-content: center;
   gap: 0.5rem;
@@ -308,6 +308,10 @@ body {
 
 .hero-hometown .content .row2-description {
   text-align: justify;
+}
+
+.hero-hometown .content .row2-description .fun-fact {
+  font-weight: 100;
 }
 
 .hero-hometown .content .row2-cities {
@@ -402,7 +406,6 @@ body {
 .hero-hometown .content .row2-cities .bekasi .cities-buttons .cta:hover {
   background-color: var(--primary);
 }
-
 /* Hometown end */
 
 /* Media queries */
