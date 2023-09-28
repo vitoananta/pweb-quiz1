@@ -17,6 +17,7 @@ body {
   font-family: 'Noto Sans', sans-serif;
   background-color: var(--bg);
   color: #e5e7eb;
+  overflow-x: hidden;
 }
 
 /* Navbar start*/
@@ -415,7 +416,6 @@ body {
 /* Food start */
 .hero-food {
   width: 100vw;
-  min-height: 100vh;
   display: flex;
   background-image: url('../img/solid/black.jpg');
   background-repeat: no-repeat;
@@ -428,14 +428,119 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.2rem 7%;
 }
 
 .hero-food .content .row1-title h1 {
   padding-top: 5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.8rem;
   font-size: 3rem;
 }
+
+.hero-food .content #soto-betawi {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../img/food/soto-betawi.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-food .content .soto-betawi-title {
+  position: fixed;
+  width: 100vw;
+  top: 30%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  mix-blend-mode: exclusion;
+  font-size: 9rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.hero-food .content .soto-betawi-title.show {
+  opacity: 1;
+}
+
+.hero-food .content #kerak-telor {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../img/food/kerak-telor.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-food .content .kerak-telor-title {
+  position: fixed;
+  width: 100vw;
+  top: 30%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  mix-blend-mode: exclusion;
+  font-size: 9rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.hero-food .content .kerak-telor-title.show {
+  opacity: 1;
+}
+
+.hero-food .content #nasi-uduk {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../img/food/nasi-uduk.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-food .content .nasi-uduk-title {
+  position: fixed;
+  width: 100vw;
+  top: 30%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  mix-blend-mode: exclusion;
+  font-size: 9rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  padding: 0 7%;
+}
+
+.hero-food .content .nasi-uduk-title.show {
+  opacity: 1;
+}
+
+.hero-food .content #gado-gado {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../img/food/gado-gado.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-food .content .gado-gado-title {
+  position: fixed;
+  width: 100vw;
+  top: 30%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  mix-blend-mode: exclusion;
+  font-size: 9rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.hero-food .content .gado-gado-title.show {
+  opacity: 1;
+}
+
 /* Food end */
 
 /* Media queries */
