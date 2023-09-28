@@ -1,5 +1,6 @@
 // Toogle active class for hamburger menu
 const mainNav = document.querySelector('.main-nav');
+const navbarLogo = document.querySelector('.navbar-logo');
 
 // When click on hamburger menu
 const hamburger = document.querySelector('#hamburger-menu');
@@ -9,7 +10,7 @@ hamburger.onclick = () => {
 
 // Close hamburger menu when click outside of it
 document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !mainNav.contains(e.target)) {
+    if (!hamburger.contains(e.target) && !mainNav.contains(e.target) && !navbarLogo.contains(e.target)) {
         mainNav.classList.remove('active');
     }
 });
@@ -211,7 +212,7 @@ monasCloseIcon.onclick = (e) => {
 }
 
 document.addEventListener('click', (e) => {
-    if (!monasModalBox.contains(e.target) && !mainNav.contains(e.target) && !monasModalButton.contains(e.target)) {
+    if (!monasModalBox.contains(e.target) && !mainNav.contains(e.target) && !monasModalButton.contains(e.target) && !navbarLogo.contains(e.target)) {
         monasModal.style.display = 'none';
         e.preventDefault();
     }
@@ -234,7 +235,7 @@ kotaTuaCloseIcon.onclick = (e) => {
 }
 
 document.addEventListener('click', (e) => {
-    if (!kotaTuaModalBox.contains(e.target) && !mainNav.contains(e.target) && !kotaTuaModalButton.contains(e.target)) {
+    if (!kotaTuaModalBox.contains(e.target) && !mainNav.contains(e.target) && !kotaTuaModalButton.contains(e.target) && !navbarLogo.contains(e.target)) {
         kotaTuaModal.style.display = 'none';
         e.preventDefault();
     }
@@ -257,7 +258,7 @@ tmiiCloseIcon.onclick = (e) => {
 }
 
 document.addEventListener('click', (e) => {
-    if (!tmiiModalBox.contains(e.target) && !mainNav.contains(e.target) && !tmiiModalButton.contains(e.target)) {
+    if (!tmiiModalBox.contains(e.target) && !mainNav.contains(e.target) && !tmiiModalButton.contains(e.target) && !navbarLogo.contains(e.target)) {
         tmiiModal.style.display = 'none';
         e.preventDefault();
     }
@@ -280,7 +281,7 @@ ragunanCloseIcon.onclick = (e) => {
 }
 
 document.addEventListener('click', (e) => {
-    if (!ragunanModalBox.contains(e.target) && !mainNav.contains(e.target) && !ragunanModalButton.contains(e.target)) {
+    if (!ragunanModalBox.contains(e.target) && !mainNav.contains(e.target) && !ragunanModalButton.contains(e.target) && !navbarLogo.contains(e.target)) {
         ragunanModal.style.display = 'none';
         e.preventDefault();
     }
@@ -303,7 +304,7 @@ dufanCloseIcon.onclick = (e) => {
 }
 
 document.addEventListener('click', (e) => {
-    if (!dufanModalBox.contains(e.target) && !mainNav.contains(e.target) && !dufanModalButton.contains(e.target)) {
+    if (!dufanModalBox.contains(e.target) && !mainNav.contains(e.target) && !dufanModalButton.contains(e.target) && !navbarLogo.contains(e.target)) {
         dufanModal.style.display = 'none';
         e.preventDefault();
     }
@@ -326,7 +327,7 @@ tanseraCloseIcon.onclick = (e) => {
 }
 
 document.addEventListener('click', (e) => {
-    if (!tanseraModalBox.contains(e.target) && !mainNav.contains(e.target) && !tanseraModalButton.contains(e.target)) {
+    if (!tanseraModalBox.contains(e.target) && !mainNav.contains(e.target) && !tanseraModalButton.contains(e.target) && !navbarLogo.contains(e.target)) {
         tanseraModal.style.display = 'none';
         e.preventDefault();
     }
