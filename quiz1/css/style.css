@@ -447,7 +447,6 @@ body {
 
 .hero-food .content .soto-betawi-overlay {
   position: fixed;
-  width: 100vw;
   top: 30%;
   opacity: 0;
   transition: opacity 0.3s;
@@ -457,6 +456,7 @@ body {
   padding: 1.2rem 7%;
   gap: 2rem;
   mix-blend-mode: exclusion;
+  text-align: center;
 }
 
 .hero-food .content .soto-betawi-overlay.show {
@@ -484,7 +484,6 @@ body {
   font-size: 9rem;
   text-transform: uppercase;
   letter-spacing: 1.2rem;
-  position: relative;
 }
 
 .hero-food .content .soto-betawi-overlay2 .button {
@@ -519,6 +518,7 @@ body {
   padding: 1.2rem 7%;
   gap: 2rem;
   mix-blend-mode: exclusion;
+  text-align: center;
 }
 
 .hero-food .content .kerak-telor-overlay.show {
@@ -581,6 +581,7 @@ body {
   padding: 1.2rem 7%;
   gap: 2rem;
   mix-blend-mode: exclusion;
+  text-align: center;
 }
 
 .hero-food .content .nasi-uduk-overlay.show {
@@ -643,6 +644,7 @@ body {
   padding: 1.2rem 7%;
   gap: 2rem;
   mix-blend-mode: exclusion;
+  text-align: center;
 }
 
 .hero-food .content .gado-gado-overlay.show {
@@ -684,7 +686,59 @@ body {
   background-color: var(--primary);
 }
 
+/* Modal boxes */
+.soto-betawi-modal {
+  display: flex;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
+.soto-betawi-modal-container {
+  position: relative;
+  background-color: #fefefe;
+  color: var(--bg);
+  margin: 15% auto;
+  padding: 1.2rem;
+  border: 1px solid #666;
+  width: 80%;
+  animation: modalAnimation 0.3s;
+}
+
+.soto-betawi-modal-container .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.soto-betawi-modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.soto-betawi-modal-content img {
+  height: 25rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.soto-betawi-modal-content p {
+  margin-top: 1.2rem;
+}
+
+@keyframes modalAnimation {
+  from {
+    top: -300px;
+    opacity: 0;
+  } to {
+    top: 0;
+    opacity: 1;
+  }
+}
 
 /* Food end */
 
@@ -761,6 +815,10 @@ body {
   .hero-hometown .content .row2-cities .bekasi {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .soto-betawi-modal-content {
+    flex-wrap: wrap;
   }
 }
 

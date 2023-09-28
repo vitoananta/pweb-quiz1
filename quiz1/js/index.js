@@ -14,6 +14,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// Text overlay on food page
 const foods = document.querySelectorAll('.foods');
 const sotoBetawi = document.querySelector('.soto-betawi-overlay');
 const sotoBetawiButton = document.querySelector('.soto-betawi-overlay2');
@@ -91,3 +92,24 @@ window.addEventListener('scroll', function () {
         }
     }
 });
+
+// Soto betawi modal box
+const sotoBetawiModal = document.querySelector('.soto-betawi-modal');
+const sotoBetawiModalButton = document.querySelector('.soto-betawi-modal-button');
+
+sotoBetawiModalButton.onclick = () => {
+    sotoBetawiModal.style.display = 'flex';
+    console.log('clicked open');
+}
+
+document.querySelector('.close-icon').onclick = (e) => {
+    sotoBetawiModal.style.display = 'none';
+    console.log('clicked close icon');
+}
+
+window.onclick = (e) => {
+    if (e.target === sotoBetawiModal) {
+        sotoBetawiModal.style.display = 'none';
+        console.log('clicked close outisde');
+    }
+}
