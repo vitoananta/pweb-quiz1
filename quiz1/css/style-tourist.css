@@ -1,0 +1,1114 @@
+:root {
+    --primary: #00b4d8;
+    --bg: #010101;
+}
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--bg);
+    color: #e5e7eb;
+    overflow-x: hidden;
+}
+
+/* Navbar start*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    /* border-bottom: 1px solid #015363; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e5e7eb;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    justify-content: end;
+}
+
+.navbar .navbar-nav a {
+    color: #e5e7eb;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.6);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+.navbar .navbar-nav .main-nav .active-link {
+    pointer-events: none;
+    color: var(--primary);
+}
+
+.navbar .navbar-nav .main-nav .active-link::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0.6);
+}
+
+/* Navbar end*/
+
+/* Tourist start */
+.hero-tourist {
+    width: 100vw;
+    display: flex;
+    background-image: url('../img/solid/black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-tourist .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-tourist .content .row1-title h1 {
+    padding-top: 5rem;
+    padding-bottom: 1.8rem;
+    font-size: 3rem;
+}
+
+
+.hero-tourist .content #monas {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/tourist/monas.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+}
+
+.hero-tourist .content .monas-overlay {
+    position: fixed;
+    top: 30%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-align: center;
+    z-index: 2;
+    mix-blend-mode: normal;
+    color: #fefefe;
+}
+
+.hero-tourist .content .monas-overlay.show {
+    opacity: 1;
+}
+
+.hero-tourist .content .monas-overlay2 {
+    position: fixed;
+    width: 100vw;
+    bottom: 30%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    z-index: 2;
+    display: none;
+}
+
+.hero-tourist .content .monas-overlay2.show {
+    animation: detailButtonAnimation 0.3s;
+}
+
+.hero-tourist .content .monas-overlay .title {
+    font-size: 9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2rem;
+}
+
+.hero-tourist .content .monas-overlay2 .monas-modal-button {
+    padding: 0.8rem 1.6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-tourist .content .monas-overlay2 .monas-modal-button:hover {
+    background-color: var(--primary);
+}
+
+.hero-tourist .content #kota-tua {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/tourist/kota-tua.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+}
+
+.hero-tourist .content .kota-tua-overlay {
+    position: fixed;
+    top: 30%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    color: rgb(223, 223, 223);
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-align: center;
+    z-index: 2;
+    mix-blend-mode: normal;
+}
+
+.hero-tourist .content .kota-tua-overlay.show {
+    opacity: 1;
+}
+
+.hero-tourist .content .kota-tua-overlay2 {
+    position: fixed;
+    width: 100vw;
+    bottom: 30%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    z-index: 2;
+    display: none;
+}
+
+.hero-tourist .content .kota-tua-overlay2.show {
+    animation: detailButtonAnimation 0.3s;
+}
+
+.hero-tourist .content .kota-tua-overlay .title {
+    font-size: 9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2rem;
+}
+
+.hero-tourist .content .kota-tua-overlay2 .kota-tua-modal-button {
+    padding: 0.8rem 1.6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-tourist .content .kota-tua-overlay2 .kota-tua-modal-button:hover {
+    background-color: var(--primary);
+}
+
+.hero-tourist .content #tmii {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/tourist/tmii.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+}
+
+.hero-tourist .content .tmii-overlay {
+    position: fixed;
+    top: 30%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    color: rgb(223, 223, 223);
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-align: center;
+    z-index: 2;
+    mix-blend-mode: normal;
+}
+
+.hero-tourist .content .tmii-overlay.show {
+    opacity: 1;
+}
+
+.hero-tourist .content .tmii-overlay2 {
+    position: fixed;
+    width: 100vw;
+    bottom: 30%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    z-index: 2;
+    display: none;
+}
+
+.hero-tourist .content .tmii-overlay2.show {
+    animation: detailButtonAnimation 0.3s;
+}
+
+.hero-tourist .content .tmii-overlay .title {
+    font-size: 9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2rem;
+}
+
+.hero-tourist .content .tmii-overlay2 .tmii-modal-button {
+    padding: 0.8rem 1.6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-tourist .content .tmii-overlay2 .tmii-modal-button:hover {
+    background-color: var(--primary);
+}
+
+.hero-tourist .content #ragunan {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/tourist/ragunan.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+}
+
+.hero-tourist .content .ragunan-overlay {
+    position: fixed;
+    top: 30%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-align: center;
+    z-index: 2;
+    mix-blend-mode: normal;
+    color: #fefefe;
+}
+
+.hero-tourist .content .ragunan-overlay.show {
+    opacity: 1;
+}
+
+.hero-tourist .content .ragunan-overlay2 {
+    position: fixed;
+    width: 100vw;
+    bottom: 30%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    z-index: 2;
+    display: none;
+}
+
+.hero-tourist .content .ragunan-overlay2.show {
+    animation: detailButtonAnimation 0.3s;
+}
+
+.hero-tourist .content .ragunan-overlay .title {
+    font-size: 9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2rem;
+}
+
+.hero-tourist .content .ragunan-overlay2 .ragunan-modal-button {
+    padding: 0.8rem 1.6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-tourist .content .ragunan-overlay2 .ragunan-modal-button:hover {
+    background-color: var(--primary);
+}
+
+.hero-tourist .content #dufan {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/tourist/dufan.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+}
+
+.hero-tourist .content .dufan-overlay {
+    position: fixed;
+    top: 30%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    color: rgb(223, 223, 223);
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-align: center;
+    z-index: 2;
+    mix-blend-mode: normal;
+}
+
+.hero-tourist .content .dufan-overlay.show {
+    opacity: 1;
+}
+
+.hero-tourist .content .dufan-overlay2 {
+    position: fixed;
+    width: 100vw;
+    bottom: 30%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    z-index: 2;
+    display: none;
+}
+
+.hero-tourist .content .dufan-overlay2.show {
+    animation: detailButtonAnimation 0.3s;
+}
+
+.hero-tourist .content .dufan-overlay .title {
+    font-size: 9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2rem;
+}
+
+.hero-tourist .content .dufan-overlay2 .dufan-modal-button {
+    padding: 0.8rem 1.6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-tourist .content .dufan-overlay2 .dufan-modal-button:hover {
+    background-color: var(--primary);
+}
+
+.hero-tourist .content #tansera {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/tourist/tansera-waterpark.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 99%);
+}
+
+.hero-tourist .content .tansera-overlay {
+    position: fixed;
+    top: 30%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    color: rgb(223, 223, 223);
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-align: center;
+    z-index: 2;
+    mix-blend-mode: normal;
+}
+
+.hero-tourist .content .tansera-overlay.show {
+    opacity: 1;
+}
+
+.hero-tourist .content .tansera-overlay2 {
+    position: fixed;
+    width: 100vw;
+    bottom: 30%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+    gap: 2rem;
+    z-index: 2;
+    display: none;
+}
+
+.hero-tourist .content .tansera-overlay2.show {
+    animation: detailButtonAnimation 0.3s;
+}
+
+.hero-tourist .content .tansera-overlay .title {
+    font-size: 9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2rem;
+}
+
+.hero-tourist .content .tansera-overlay2 .tansera-modal-button {
+    padding: 0.8rem 1.6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-tourist .content .tansera-overlay2 .tansera-modal-button:hover {
+    background-color: var(--primary);
+}
+
+/* Modal boxes start */
+.monas-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    color: var(--bg);
+}
+
+.monas-modal .monas-box {
+    background-color: #fefefe;
+    padding: 1.2rem;
+    width: calc(100% - 28%);
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.2rem;
+    border-radius: 0.3rem;
+    border: 1.5px solid var(--bg);
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    animation: foodModalAnimation 0.3s;
+}
+
+.monas-modal .monas-box .image {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+.monas-modal .monas-box .image img {
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid var(--bg);
+}
+
+.monas-modal .monas-box .description {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    text-align: justify;
+}
+
+.monas-modal .monas-box .description .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.monas-modal .monas-box .description .reference {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.monas-modal .monas-box .close .monas-close-icon {
+    display: flex;
+    justify-content: center;
+    color: var(--bg);
+}
+
+.monas-modal .monas-box .close .monas-close-icon:hover {
+    color: var(--primary);
+}
+
+.kota-tua-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    color: var(--bg);
+}
+
+.kota-tua-modal .kota-tua-box {
+    background-color: #fefefe;
+    padding: 1.2rem;
+    width: calc(100% - 28%);
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.2rem;
+    border-radius: 0.3rem;
+    border: 1.5px solid var(--bg);
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    animation: foodModalAnimation 0.3s;
+}
+
+.kota-tua-modal .kota-tua-box .image {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+.kota-tua-modal .kota-tua-box .image img {
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid var(--bg);
+}
+
+.kota-tua-modal .kota-tua-box .description {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    text-align: justify;
+}
+
+.kota-tua-modal .kota-tua-box .description .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.kota-tua-modal .kota-tua-box .description .reference {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.kota-tua-modal .kota-tua-box .close .kota-tua-close-icon {
+    display: flex;
+    justify-content: center;
+    color: var(--bg);
+}
+
+.kota-tua-modal .kota-tua-box .close .kota-tua-close-icon:hover {
+    color: var(--primary);
+}
+
+.tmii-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    color: var(--bg);
+}
+
+.tmii-modal .tmii-box {
+    background-color: #fefefe;
+    padding: 1.2rem;
+    width: calc(100% - 28%);
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.2rem;
+    border-radius: 0.3rem;
+    border: 1.5px solid var(--bg);
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    animation: foodModalAnimation 0.3s;
+}
+
+.tmii-modal .tmii-box .image {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+.tmii-modal .tmii-box .image img {
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid var(--bg);
+}
+
+.tmii-modal .tmii-box .description {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    text-align: justify;
+}
+
+.tmii-modal .tmii-box .description .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.tmii-modal .tmii-box .description .reference {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.tmii-modal .tmii-box .close .tmii-close-icon {
+    display: flex;
+    justify-content: center;
+    color: var(--bg);
+}
+
+.tmii-modal .tmii-box .close .tmii-close-icon:hover {
+    color: var(--primary);
+}
+
+.ragunan-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    color: var(--bg);
+}
+
+.ragunan-modal .ragunan-box {
+    background-color: #fefefe;
+    padding: 1.2rem;
+    width: calc(100% - 28%);
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.2rem;
+    border-radius: 0.3rem;
+    border: 1.5px solid var(--bg);
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    animation: foodModalAnimation 0.3s;
+}
+
+.ragunan-modal .ragunan-box .image {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+.ragunan-modal .ragunan-box .image img {
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid var(--bg);
+}
+
+.ragunan-modal .ragunan-box .description {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    text-align: justify;
+}
+
+.ragunan-modal .ragunan-box .description .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.ragunan-modal .ragunan-box .description .reference {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.ragunan-modal .ragunan-box .close .ragunan-close-icon {
+    display: flex;
+    justify-content: center;
+    color: var(--bg);
+}
+
+.ragunan-modal .ragunan-box .close .ragunan-close-icon:hover {
+    color: var(--primary);
+}
+
+
+.dufan-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    color: var(--bg);
+}
+
+.dufan-modal .dufan-box {
+    background-color: #fefefe;
+    padding: 1.2rem;
+    width: calc(100% - 28%);
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.2rem;
+    border-radius: 0.3rem;
+    border: 1.5px solid var(--bg);
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    animation: foodModalAnimation 0.3s;
+}
+
+.dufan-modal .dufan-box .image {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+.dufan-modal .dufan-box .image img {
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid var(--bg);
+}
+
+.dufan-modal .dufan-box .description {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    text-align: justify;
+}
+
+.dufan-modal .dufan-box .description .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.dufan-modal .dufan-box .description .reference {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.dufan-modal .dufan-box .close .dufan-close-icon {
+    display: flex;
+    justify-content: center;
+    color: var(--bg);
+}
+
+.dufan-modal .dufan-box .close .dufan-close-icon:hover {
+    color: var(--primary);
+}
+
+.tansera-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    color: var(--bg);
+}
+
+.tansera-modal .tansera-box {
+    background-color: #fefefe;
+    padding: 1.2rem;
+    width: calc(100% - 28%);
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.2rem;
+    border-radius: 0.3rem;
+    border: 1.5px solid var(--bg);
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    animation: foodModalAnimation 0.3s;
+}
+
+.tansera-modal .tansera-box .image {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+.tansera-modal .tansera-box .image img {
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid var(--bg);
+}
+
+.tansera-modal .tansera-box .description {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    text-align: justify;
+}
+
+.tansera-modal .tansera-box .description .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.tansera-modal .tansera-box .description .reference {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.tansera-modal .tansera-box .close .tansera-close-icon {
+    display: flex;
+    justify-content: center;
+    color: var(--bg);
+}
+
+.tansera-modal .tansera-box .close .tansera-close-icon:hover {
+    color: var(--primary);
+}
+
+/* Modal boxes end */
+
+/* Tourist end */
+
+/* Media queries */
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 84%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 72%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav .main-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #e5e7eb;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav .main-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav .main-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.2rem;
+    }
+
+    .navbar .navbar-nav .main-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav .main-nav a:hover::after {
+        transform: scaleX(0.1)
+    }
+
+    .navbar .navbar-nav .main-nav .active-link::after {
+        content: '';
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid var(--primary);
+        transform: scaleX(1);
+    }
+
+    .monas-modal .monas-box {
+        flex-wrap: wrap;
+    }
+
+    .monas-modal .monas-box .description {
+        width: 100%;
+    }
+
+    .monas-modal .monas-box .close {
+        width: 100%;
+        scale: 0.5;
+    }
+
+    .kota-tua-modal .kota-tua-box {
+        flex-wrap: wrap;
+    }
+
+    .kota-tua-modal .kota-tua-box .description {
+        width: 100%;
+    }
+
+    .kota-tua-modal .kota-tua-box .close {
+        width: 100%;
+        scale: 0.5;
+    }
+
+    .tmii-modal .tmii-box {
+        flex-wrap: wrap;
+    }
+
+    .tmii-modal .tmii-box .description {
+        width: 100%;
+    }
+
+    .tmii-modal .tmii-box .close {
+        width: 100%;
+        scale: 0.5;
+    }
+
+    .ragunan-modal .ragunan-box {
+        flex-wrap: wrap;
+    }
+
+    .ragunan-modal .ragunan-box .description {
+        width: 100%;
+    }
+
+    .ragunan-modal .ragunan-box .close {
+        width: 100%;
+        scale: 0.5;
+    }
+
+    .dufan-modal .dufan-box {
+        flex-wrap: wrap;
+    }
+
+    .dufan-modal .dufan-box .description {
+        width: 100%;
+    }
+
+    .dufan-modal .dufan-box .close {
+        width: 100%;
+        scale: 0.5;
+    }
+
+    .tansera-modal .tansera-box {
+        flex-wrap: wrap;
+    }
+
+    .tansera-modal .tansera-box .description {
+        width: 100%;
+    }
+
+    .tansera-modal .tansera-box .close {
+        width: 100%;
+        scale: 0.5;
+    }
+
+    .hero-tourist .content .ragunan-overlay .title {
+        font-size: 5rem;
+    }
+
+    .hero-tourist .content .tansera-overlay .title {
+        font-size: 5rem;
+    }
+}
+
+/* Mobile phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 60%;
+    }
+}

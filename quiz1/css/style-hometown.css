@@ -1,0 +1,411 @@
+:root {
+    --primary: #00b4d8;
+    --bg: #010101;
+}
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--bg);
+    color: #e5e7eb;
+    overflow-x: hidden;
+}
+
+/* Navbar start*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    /* border-bottom: 1px solid #015363; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e5e7eb;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    justify-content: end;
+}
+
+.navbar .navbar-nav a {
+    color: #e5e7eb;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.6);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+.navbar .navbar-nav .main-nav .active-link {
+    pointer-events: none;
+    color: var(--primary);
+}
+
+.navbar .navbar-nav .main-nav .active-link::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0.6);
+}
+
+/* Navbar end*/
+
+/* Hometown start */
+.hero-hometown {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    background-image: url('../img/solid/black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-hometown .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 7%;
+}
+
+.hero-hometown .content .row1-title h1 {
+    padding-top: 5rem;
+    font-size: 3rem;
+}
+
+.hero-hometown .content h1 span {
+    color: var(--primary);
+}
+
+.hero-hometown .content .row2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 14% - 5rem);
+    gap: 1.2rem;
+}
+
+.hero-hometown .content .row2-description {
+    text-align: justify;
+}
+
+.hero-hometown .content .row2-description .fun-fact-modal-button {
+    background-color: #05a2c2;
+    padding: 0.2rem 0.3rem 0;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero-hometown .content .row2-description .fun-fact-modal-button:hover {
+    background-color: var(--primary);
+}
+
+.fun-fact-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    color: var(--bg);
+}
+
+.fun-fact-modal .fun-fact-box {
+    background-color: #fefefe;
+    padding: 1.2rem;
+    width: calc(100% - 28%);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    border-radius: 0.3rem;
+    border: 1.5px solid var(--bg);
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    animation: funFactModalAnimation 0.3s;
+}
+
+.fun-fact-modal .fun-fact-box .image {
+    width: 100%;
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.fun-fact-modal .fun-fact-box .image .image1 {
+    width: 50%;
+    border-radius: 0.3rem;
+}
+
+.fun-fact-modal .fun-fact-box .image .image1 img {
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid var(--bg);
+}
+
+.fun-fact-modal .fun-fact-box .image .image2 {
+    width: 50%;
+    border-radius: 0.3rem;
+}
+
+.fun-fact-modal .fun-fact-box .image .image2 img {
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid var(--bg);
+}
+
+.fun-fact-modal .fun-fact-box .description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    text-align: justify;
+}
+
+.fun-fact-modal .fun-fact-box .description .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.fun-fact-modal .fun-fact-box .close .fun-fact-close-icon {
+    color: var(--bg);
+    display: flex;
+    justify-content: center;
+}
+
+.fun-fact-modal .fun-fact-box .close .fun-fact-close-icon:hover {
+    color: var(--primary);
+}
+
+@keyframes funFactModalAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-hometown .content .row2-cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.hero-hometown .content .row2-cities .jakarta {
+    flex: 0 0 calc(50% - 1.5rem);
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.hero-hometown .content .row2-cities .jakarta img {
+    width: 50%;
+    transform: scale(1);
+    transition: transform 0.5s;
+    border-radius: 0.3rem;
+    border: 2px solid #e5e7eb;
+}
+
+.hero-hometown .content .row2-cities .jakarta img:hover {
+    width: 50%;
+    transform: scale(1.1);
+}
+
+.hero-hometown .content .row2-cities .jakarta p {
+    text-align: justify;
+}
+
+.hero-hometown .content .row2-cities .bekasi {
+    flex: 0 0 calc(50% - 1.5rem);
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.hero-hometown .content .row2-cities .bekasi img {
+    width: 50%;
+    transform: scale(1);
+    transition: transform 0.5s;
+    border-radius: 0.5rem;
+    border: 2px solid #e5e7eb;
+}
+
+.hero-hometown .content .row2-cities .bekasi img:hover {
+    width: 50%;
+    transform: scale(1.1);
+}
+
+.hero-hometown .content .row2-cities .bekasi p {
+    text-align: justify;
+}
+
+.hero-hometown .content .row3-explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.hero-hometown .content .row3-explore .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero-hometown .content .row3-explore .cta {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.2rem;
+    color: #e5e7eb;
+    background-color: #05a2c2;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero-hometown .content .row3-explore .cta:hover {
+    background-color: var(--primary);
+}
+
+/* Hometown end */
+
+/* Media queries */
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 84%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 72%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav .main-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #e5e7eb;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav .main-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav .main-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.2rem;
+    }
+
+    .navbar .navbar-nav .main-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav .main-nav a:hover::after {
+        transform: scaleX(0.1)
+    }
+
+    .navbar .navbar-nav .main-nav .active-link::after {
+        content: '';
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid var(--primary);
+        transform: scaleX(1);
+    }
+
+    .hero-hometown .content .row2-cities .jakarta {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .hero-hometown .content .row2-cities .bekasi {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .fun-fact-modal .fun-fact-box .image {
+        flex-wrap: wrap;
+    }
+
+    .fun-fact-modal .fun-fact-box .image .image1 {
+        width: 100%;
+    }
+
+    .fun-fact-modal .fun-fact-box .image .image2 {
+        width: 100%;
+    }
+}
+
+/* Mobile phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 60%;
+    }
+}
