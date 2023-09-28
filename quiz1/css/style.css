@@ -926,6 +926,8 @@ body {
 
 .kerak-telor-modal .kerak-telor-box .image {
   width: 70%;
+  height: 100%;
+  margin: auto;
 }
 
 .kerak-telor-modal .kerak-telor-box .image img {
@@ -956,6 +958,8 @@ body {
 }
 
 .kerak-telor-modal .kerak-telor-box .close .kerak-telor-close-icon {
+  display: flex;
+  justify-content: center;
   color: var(--bg);
 }
 
@@ -992,6 +996,8 @@ body {
 
 .nasi-uduk-modal .nasi-uduk-box .image {
   width: 70%;
+  height: 100%;
+  margin: auto;
 }
 
 .nasi-uduk-modal .nasi-uduk-box .image img {
@@ -1022,6 +1028,8 @@ body {
 }
 
 .nasi-uduk-modal .nasi-uduk-box .close .nasi-uduk-close-icon {
+  display: flex;
+  justify-content: center;
   color: var(--bg);
 }
 
@@ -1058,6 +1066,8 @@ body {
 
 .gado-gado-modal .gado-gado-box .image {
   width: 70%;
+  height: 100%;
+  margin: auto;
 }
 
 .gado-gado-modal .gado-gado-box .image img {
@@ -1088,6 +1098,8 @@ body {
 }
 
 .gado-gado-modal .gado-gado-box .close .gado-gado-close-icon {
+  display: flex;
+  justify-content: center;
   color: var(--bg);
 }
 
@@ -2067,6 +2079,123 @@ body {
     scale: 0.5;
   }
 
+  .kerak-telor-modal .kerak-telor-box {
+    flex-wrap: wrap;
+  }
+
+  .kerak-telor-modal .kerak-telor-box .description {
+    width: 100%;
+  }
+
+  .kerak-telor-modal .kerak-telor-box .close {
+    width: 100%;
+    scale: 0.5;
+  }
+
+  .nasi-uduk-modal .nasi-uduk-box {
+    flex-wrap: wrap;
+  }
+
+  .nasi-uduk-modal .nasi-uduk-box .description {
+    width: 100%;
+  }
+
+  .nasi-uduk-modal .nasi-uduk-box .close {
+    width: 100%;
+    scale: 0.5;
+  }
+
+  .gado-gado-modal .gado-gado-box {
+    flex-wrap: wrap;
+  }
+
+  .gado-gado-modal .gado-gado-box .description {
+    width: 100%;
+  }
+
+  .gado-gado-modal .gado-gado-box .close {
+    width: 100%;
+    scale: 0.5;
+  }
+
+  .monas-modal .monas-box {
+    flex-wrap: wrap;
+  }
+
+  .monas-modal .monas-box .description {
+    width: 100%;
+  }
+
+  .monas-modal .monas-box .close {
+    width: 100%;
+    scale: 0.5;
+  }
+
+  .kota-tua-modal .kota-tua-box {
+    flex-wrap: wrap;
+  }
+
+  .kota-tua-modal .kota-tua-box .description {
+    width: 100%;
+  }
+
+  .kota-tua-modal .kota-tua-box .close {
+    width: 100%;
+    scale: 0.5;
+  }
+
+  .tmii-modal .tmii-box {
+    flex-wrap: wrap;
+  }
+
+  .tmii-modal .tmii-box .description {
+    width: 100%;
+  }
+
+  .tmii-modal .tmii-box .close {
+    width: 100%;
+    scale: 0.5;
+  }
+
+  .ragunan-modal .ragunan-box {
+    flex-wrap: wrap;
+  }
+
+  .ragunan-modal .ragunan-box .description {
+    width: 100%;
+  }
+
+  .ragunan-modal .ragunan-box .close {
+    width: 100%;
+    scale: 0.5;
+  }
+
+  .dufan-modal .dufan-box {
+    flex-wrap: wrap;
+  }
+
+  .dufan-modal .dufan-box .description {
+    width: 100%;
+  }
+
+  .dufan-modal .dufan-box .close {
+    width: 100%;
+    scale: 0.5;
+  }
+
+  .tansera-modal .tansera-box {
+    flex-wrap: wrap;
+  }
+
+  .tansera-modal .tansera-box .description {
+    width: 100%;
+  }
+
+  .tansera-modal .tansera-box .close {
+    width: 100%;
+    scale: 0.5;
+  }
+
   .fun-fact-modal .fun-fact-box .image {
     flex-wrap: wrap;
   }
@@ -2077,6 +2206,14 @@ body {
 
   .fun-fact-modal .fun-fact-box .image .image2 {
     width: 100%;
+  }
+
+  .hero-tourist .content .ragunan-overlay .title {
+    font-size: 5rem;
+  }
+
+  .hero-tourist .content .tansera-overlay .title {
+    font-size: 5rem;
   }
 }
 
