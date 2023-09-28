@@ -322,8 +322,107 @@ body {
   text-align: justify;
 }
 
-.hero-hometown .content .row2-description .fun-fact {
-  font-weight: 100;
+.hero-hometown .content .row2-description .fun-fact-modal-button {
+  background-color: #05a2c2;
+  padding: 0.2rem 0.3rem 0;
+  border-radius: 0.3rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero-hometown .content .row2-description .fun-fact-modal-button:hover {
+  background-color: var(--primary);
+}
+
+.fun-fact-modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  color: var(--bg);
+}
+
+.fun-fact-modal .fun-fact-box {
+  background-color: #fefefe;
+  padding: 1.2rem;
+  width: calc(100% - 28%);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border-radius: 0.3rem;
+  border: 1.5px solid var(--bg);
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  animation: funFactModalAnimation 0.3s;
+}
+
+.fun-fact-modal .fun-fact-box .image {
+  width: 100%;
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+.fun-fact-modal .fun-fact-box .image .image1 {
+  width: 50%;
+  border-radius: 0.3rem;
+}
+
+.fun-fact-modal .fun-fact-box .image .image1 img {
+  width: 100%;
+  border-radius: 0.3rem;
+  border: 1px solid var(--bg);
+}
+
+.fun-fact-modal .fun-fact-box .image .image2 {
+  width: 50%;
+  border-radius: 0.3rem;
+}
+
+.fun-fact-modal .fun-fact-box .image .image2 img {
+  width: 100%;
+  border-radius: 0.3rem;
+  border: 1px solid var(--bg);
+}
+
+.fun-fact-modal .fun-fact-box .description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+  text-align: justify;
+}
+
+.fun-fact-modal .fun-fact-box .description .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.fun-fact-modal .fun-fact-box .close .fun-fact-close-icon {
+  color: var(--bg);
+  display: flex;
+  justify-content: center;
+}
+
+.fun-fact-modal .fun-fact-box .close .fun-fact-close-icon:hover {
+  color: var(--primary);
+}
+
+@keyframes funFactModalAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .hero-hometown .content .row2-cities {
@@ -1096,6 +1195,18 @@ body {
   .soto-betawi-modal .soto-betawi-box .close {
     width: 100%;
     scale: 0.5;
+  }
+
+  .fun-fact-modal .fun-fact-box .image {
+    flex-wrap: wrap;
+  }
+
+  .fun-fact-modal .fun-fact-box .image .image1 {
+    width: 100%;
+  }
+
+  .fun-fact-modal .fun-fact-box .image .image2 {
+    width: 100%;
   }
 }
 
