@@ -15,10 +15,14 @@ document.addEventListener('click', (e) => {
 });
 
 const foods = document.querySelectorAll('.foods');
-const sotoBetawi = document.querySelector('.soto-betawi-title');
-const kerakTelor = document.querySelector('.kerak-telor-title');
-const nasiUduk = document.querySelector('.nasi-uduk-title');
-const gadoGado = document.querySelector('.gado-gado-title');
+const sotoBetawi = document.querySelector('.soto-betawi-overlay');
+const sotoBetawiButton = document.querySelector('.soto-betawi-overlay2');
+const kerakTelor = document.querySelector('.kerak-telor-overlay');
+const kerakTelorButton = document.querySelector('.kerak-telor-overlay2');
+const nasiUduk = document.querySelector('.nasi-uduk-overlay');
+const nasiUdukButton = document.querySelector('.nasi-uduk-overlay2');
+const gadoGado = document.querySelector('.gado-gado-overlay');
+const gadoGadoButton = document.querySelector('.gado-gado-overlay2');
 
 window.addEventListener('scroll', function () {
     let currentfood = '';
@@ -39,30 +43,50 @@ window.addEventListener('scroll', function () {
                 kerakTelor.classList.remove('show');
                 nasiUduk.classList.remove('show');
                 gadoGado.classList.remove('show');
+                sotoBetawiButton.classList.add('show');
+                kerakTelorButton.classList.remove('show');
+                nasiUdukButton.classList.remove('show');
+                gadoGadoButton.classList.remove('show');
                 break;
             case 'kerak-telor':
                 kerakTelor.classList.add('show');
                 sotoBetawi.classList.remove('show');
                 nasiUduk.classList.remove('show');
                 gadoGado.classList.remove('show');
+                kerakTelorButton.classList.add('show');
+                sotoBetawiButton.classList.remove('show');
+                nasiUdukButton.classList.remove('show');
+                gadoGadoButton.classList.remove('show');
                 break;
             case 'nasi-uduk':
                 nasiUduk.classList.add('show');
                 sotoBetawi.classList.remove('show');
                 kerakTelor.classList.remove('show');
                 gadoGado.classList.remove('show');
+                nasiUdukButton.classList.add('show');
+                sotoBetawiButton.classList.remove('show');
+                kerakTelorButton.classList.remove('show');
+                gadoGadoButton.classList.remove('show');
                 break;
             case 'gado-gado':
                 gadoGado.classList.add('show');
                 sotoBetawi.classList.remove('show');
                 kerakTelor.classList.remove('show');
                 nasiUduk.classList.remove('show');
+                gadoGadoButton.classList.add('show');
+                sotoBetawiButton.classList.remove('show');
+                kerakTelorButton.classList.remove('show');
+                nasiUdukButton.classList.remove('show');
                 break;
             default:
                 sotoBetawi.classList.add('show');
                 kerakTelor.classList.remove('show');
                 nasiUduk.classList.remove('show');
                 gadoGado.classList.remove('show');
+                sotoBetawiButton.classList.add('show');
+                kerakTelorButton.classList.remove('show');
+                nasiUdukButton.classList.remove('show');
+                gadoGadoButton.classList.remove('show');
                 break;
         }
     }
