@@ -116,6 +116,7 @@ body {
 
 .hero-hometown .content .row1-title h1 {
     padding-top: 5rem;
+    padding-bottom: 2rem;
     font-size: 3rem;
 }
 
@@ -127,7 +128,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh - 14% - 5rem);
     gap: 1.2rem;
 }
 
